@@ -1,0 +1,15 @@
+
+node_modules/
+.vscode/
+src/main/datadict/
+src/main/java/
+src/main/resources/
+target/main/datadict/
+target/main/java/
+target/main/resources/
+src/main/webapp/dependence/
+
+
+src/main/webapp/plugins/
+target/main/webapp/plugins/
+target/webapp/dependence/
