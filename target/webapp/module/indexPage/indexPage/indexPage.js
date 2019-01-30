@@ -94,7 +94,20 @@ define([].concat(window.aweb.transformJsConfig([ "ctn", "ctn.divCtn" ])).concat(
                     pageNSL: [],
                     widgetNSL: {},
                     validations: {},
-                    lifecycle: {},
+                    lifecycle: {
+                        indexPage_load_init_000002: {
+                            func: function() {
+                                aweb.debug && aweb.stepTo("indexPage-indexPage-生命周期配置-加载窗口布局");
+                                require([ "aweb-window-layout" ], function(Layout) {
+                                    const layout = new Layout($("#indexPage", $el));
+                                });
+                            },
+                            times: 0,
+                            clock: 1e3,
+                            immediate: false,
+                            isPause: true
+                        }
+                    },
                     variables: {},
                     ajaxOption: {},
                     eventCallback: {},
@@ -111,6 +124,7 @@ define([].concat(window.aweb.transformJsConfig([ "ctn", "ctn.divCtn" ])).concat(
                         auiCtx.handler = _handler;
                         handler.auiCtx = auiCtx;
                         variables.indexPage = $AW.ctn.divCtn($("#indexPage", $el), configs.indexPage, attr.indexPage, $AW.css("ctn.divCtn", css.indexPage), auiCtx);
+                        auiCtx.lifecycle.indexPage_load_init_000002.func();
                     },
                     auiCtxResume: function(auiCtx, $el, scope, handler) {},
                     auiCtxPause: function(auiCtx, $el, scope, handler) {},

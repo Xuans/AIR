@@ -31,6 +31,8 @@
     "chosen-jquery/css/chosen.css": "chosen.jquery/css/chosen.css",
     "jQuery.dataTables/css/jquery.dataTables.css": "jquery.dataTables/css/jquery.dataTables.css",
     "switcher/css/bootstrap-switch.css": "bootstrap-switch/css/bootstrap-switch.css",
+    "aweb-window-layout.css": "aweb-window-layout/style.css",
+    "aweb-window-layout-iconfont.css": "aweb-window-layout/iconfont/iconfont.css",
     "handsonTable/css/pikaday.css": "pikaday/css/pikaday.css",
     "jQuery.dataTables/css/fixedColumns.dataTables.css": "dataTables.fixedColumns.min/css/fixedColumns.dataTables.css",
     "AUI/css/layout.ctn.css": "layout.ctn/css/layout.ctn.css",
@@ -500,7 +502,13 @@
     },
     "aweb-window-layout": {
         "name": "aweb-window-layout",
-        "path": "dependence/aweb-window-layout/index.js"
+        "path": "dependence/aweb-window-layout/index.js",
+        "deps": [
+            "jqueryUI",
+            "template",
+            "@aweb-plugins/app.hsla",
+            "@aweb-plugins/app.getUID"
+        ]
     },
     "pikaday": {
         "name": "pikaday",

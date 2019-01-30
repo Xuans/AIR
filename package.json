@@ -43,7 +43,7 @@
         "@aweb-components/component.echarts.dashboard": "^6.0.5",
         "@aweb-components/component.echarts.line": "^6.0.5",
         "@aweb-components/component.echarts.pie": "^6.0.5",
-        "@aweb-components/component.form": "^6.0.5",
+        "@aweb-components/component.form": "^6.0.6",
         "@aweb-components/component.form.checkbox": "^6.0.5",
         "@aweb-components/component.form.checkboxGroup": "^6.0.5",
         "@aweb-components/component.form.input": "^6.0.5",
@@ -153,6 +153,7 @@
         "@aweb-template/bootloaderTemplate": "^6.0.0",
         "@aweb-template/editor": "^6.0.0",
         "@aweb-template/webpackConfig": "^6.0.0",
+        "@aweb-lib/aweb-window-layout": "^6.0.0",
         "cli-color": "^1.4.0",
         "fs": "0.0.1-security",
         "gravatar": "^1.8.0",
@@ -172,5 +173,6 @@
         "webpack-cli": "3.1.2",
         "webpack-dev-server": "3.1.10",
         "webpack-stream": "^5.2.1"
-    }
+    },
+    "port": 50314
 }
