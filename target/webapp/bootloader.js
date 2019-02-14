@@ -506,8 +506,8 @@
         "deps": [
             "jqueryUI",
             "template",
-            "@aweb-plugins/app.hsla",
-            "@aweb-plugins/app.getUID"
+            "@aweb-plugins/app.getUID",
+            "@aweb-plugins/app.hsla"
         ]
     },
     "pikaday": {
