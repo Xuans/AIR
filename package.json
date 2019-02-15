@@ -25,7 +25,7 @@
         "nsl": "gulp nsl",
         "plugins": "gulp plugins",
         "server": "webpack-dev-server --open",
-        "test":"node server.js"
+        "test": "node server.js"
     },
     "keywords": [],
     "author": "wubingyu",
@@ -113,7 +113,7 @@
         "@aweb-initApp/pomX": "^6.0.0",
         "@aweb-initApp/resources": "^6.0.0",
         "@aweb-lib/aweb-window-layout": "^6.0.2",
-        "@aweb-lib/jquery": "^6.0.1",
+        "@aweb-lib/jquery": "^6.0.0",
         "@aweb-lib/requireCss": "^6.0.0",
         "@aweb-lib/requireJS": "^6.0.0",
         "@aweb-lib/text": "^6.0.0",
@@ -151,7 +151,7 @@
         "@aweb-plugins/app.stringify": "^6.0.0",
         "@aweb-plugins/app.title": "^6.0.0",
         "@aweb-plugins/app.validate": "^6.0.5",
-        "@aweb-template/AWEB": "^6.0.4",
+        "@aweb-template/AWEB": "^6.0.5",
         "@aweb-template/bootloaderTemplate": "^6.0.0",
         "@aweb-template/editor": "^6.0.0",
         "@aweb-template/webpackConfig": "^6.0.0",
@@ -175,5 +175,8 @@
         "webpack-dev-server": "3.1.10",
         "webpack-stream": "^5.2.1"
     },
-    "port": 54893
+    "port": 52376,
+    "dependencies": {
+        "child_process": "^1.0.2"
+    }
 }
