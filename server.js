@@ -5,12 +5,13 @@ const serve = require('koa-static');
 
 const fs = require('fs');
 const https = require('https');
-const enforceHttps = require('koa-sslify');
 const router=require('koa-router')();
+const koaBody = require('koa-body');
 
 //services
 const error404=require('./server/error/404');
 const loginV1=require('./server/api/v1/login');
+const uploadFile=require('./server/api/v1/upload');
 
 
 const config={
@@ -29,6 +30,13 @@ router.get('/',async (ctx,next)=> {
 //登录模块
 router.post('/getCSRFToken.do',loginV1.getCSRFToken);
 
+router.post('/uploadFile.do',uploadFile(config));
+
+
+//parser
+app.use(koaBody({
+	multipart: true
+}));
 
 //static server
 const main = serve(config.path);

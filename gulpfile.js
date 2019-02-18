@@ -34,6 +34,11 @@ let staticExtname = '*(svg|eot|ttf|woff|woff2|gif|png|jpg|jpeg)', config = {
             dest: 'src/main/webapp/',
             tips: '拷贝AUI编辑器文件'
         },
+        img: {
+            source: ['node_modules/@aweb-template/img/**/*', '!node_modules/@aweb-template/img/**/package.json'],
+            dest: 'src/main/webapp/img',
+            tips: '拷贝img文件'
+        },
         bootloaderTemplate: {
             source: ['node_modules/@aweb-template/bootloaderTemplate/bootloaderTemplate.js'],
             dest: 'src/main/webapp/',
@@ -74,6 +79,16 @@ let staticExtname = '*(svg|eot|ttf|woff|woff2|gif|png|jpg|jpeg)', config = {
             dest: 'src/main/resources',
             tips: '资源配置'
         },
+        sql: {
+            source: ['node_modules/@aweb-initApp/sql/**/*', '!node_modules/@aweb-initApp/sql/**/package.json'],
+            dest: 'src/main/resources',
+            tips: '初始化脚本'
+        },
+        webXml: {
+            source: ['node_modules/@aweb-initApp/webXml/**/*', '!node_modules/@aweb-initApp/webXml/**/package.json'],
+            dest: 'src/main/webapp/WEB-INF',
+            tips: '初始化web.xml'
+        },
     },
     js: [{
             source: ['node_modules/@aweb-lib/**/*.js'],
@@ -103,32 +118,64 @@ let staticExtname = '*(svg|eot|ttf|woff|woff2|gif|png|jpg|jpeg)', config = {
     css: [
         {
             source: [
-                'node_modules/@aweb-lib/**/*.css',
-                'node_modules/@aweb-components/**/*.css',
+                'node_modules/@aweb-lib/**/*.css'
+            ],
+            dest: 'target/webapp/dependence/',
+            watch: [
+                'node_modules/@aweb-lib/**/*.css'
+            ],
+            tips: '@aweb-lib css 样式'
+        },
+        {
+            source: [
+                'node_modules/@aweb-components/**/*.css'
+            ],
+            dest: 'target/webapp/dependence/',
+            watch: [
+                'node_modules/@aweb-components/**/*.css'
+            ],
+            tips: '@aweb-components css 样式'
+        },
+        {
+            source: [
                 'src/main/webapp/dependence/**/*.css'
             ],
             dest: 'target/webapp/dependence/',
             watch: [
-                'node_modules/@aweb-lib/**/*.css',
-                'node_modules/@aweb-components/**/*.css',
                 'src/main/webapp/dependence/**/*.css'
             ],
-            tips: 'css 样式'
+            tips: 'src/main/webapp/dependence/下 css样式'
         }
     ],
     less: [{
             source: [
-                'node_modules/@aweb-lib/**/*.less',
-                'node_modules/@aweb-components/**/*.less',
+                'node_modules/@aweb-lib/**/*.less'
+            ],
+            dest: 'target/webapp/dependence/',
+            watch: [
+                'node_modules/@aweb-lib/**/*.less'
+            ],
+            tips: '@aweb-lib less 样式'
+        },
+        {
+            source: [
+                'node_modules/@aweb-components/**/*.less'
+            ],
+            dest: 'target/webapp/dependence/',
+            watch: [
+                'node_modules/@aweb-components/**/*.less'
+            ],
+            tips: '@aweb-components less 样式'
+        },
+        {
+            source: [
                 'src/main/webapp/dependence/**/*.less'
             ],
             dest: 'target/webapp/dependence/',
             watch: [
-                'node_modules/@aweb-lib/**/*.less',
-                'node_modules/@aweb-components/**/*.less',
                 'src/main/webapp/dependence/**/*.less'
             ],
-            tips: 'less 样式'
+            tips: 'src/main/webapp/dependence/下 less样式'
         }],
     static: [{
             source: [
@@ -177,10 +224,10 @@ let staticExtname = '*(svg|eot|ttf|woff|woff2|gif|png|jpg|jpeg)', config = {
         ]
     },
     plugins: {
-        source: 'src/main/webapp/plugins/',
-        watch: ['src/main/webapp/plugins/**/*'],
-        dest: 'src/main/webapp/dependence/AWEB/js',
-        _dest: 'target/webapp/dependence/AWEB/js',
+        source: `${__dirname}/src/main/webapp/plugins/`,
+        watch: [`${__dirname}/src/main/webapp/plugins/**/*`],
+        dest: `${__dirname}/src/main/webapp/dependence/AWEB/js`,
+        _dest: `${__dirname}/target/webapp/dependence/AWEB/js`,
         tips: '初始化plugins index.js文件'
     },
     nsl: {
@@ -286,7 +333,7 @@ const getLibComponentsDeps = (targetPath, dep) => {
                         let dependencies = Object.keys(data.dependencies);
                         if (dependencies.length) {
                             let depStr = dependencies.join(',');
-                            depStr = depStr.replace(/(?:[,]+\@aweb-template[^,]+)|(?:\@aweb-lib\/)|(?:\@aweb-components\/)/gi, '');
+                            depStr = depStr.replace(/(?:[,]+\@aweb-template[^,]+)|(?:\@aweb-lib\/)|(?:\@aweb-components\/)|(?:\@aweb-plugins\/)/gi, '');
                             temp.deps = depStr.split(',');
                         }
                     }
@@ -498,15 +545,18 @@ const runLess = (item) => {
         }
     };
 };
-const run = (item) => {
+const run = (item, resolve) => {
     return () => {
         try {
             var pipe = gulp.src(item.source, { allowEmpty: true });
             pipe = pipe.pipe(gulp.dest(item.dest));
             if (item._dest) {
-                pipe.pipe(gulp.dest(item._dest));
+                pipe = pipe.pipe(gulp.dest(item._dest));
             }
-            showFinishText(item.tips);
+            pipe.on('end', () => {
+                showFinishText(item.tips);
+                resolve && resolve();
+            });
         }
         catch (error) {
             showErrorText(error);
@@ -549,7 +599,7 @@ const runPlugins = (item) => {
     // let webpackConfig = require('./webpack.config.js');
     return () => __awaiter(this, void 0, void 0, function* () {
         try {
-            let target = item.source, dir = yield readdir(target), jsContent = [], constMap = {}, interfacesMap = {}, intefacesCategoryMap = {}, appInterfacesConst = [], appInterfaces;
+            let target = item.source, dir = yield readdir(target), jsContent = [], requireApp = [], constMap = {}, interfacesMap = {}, intefacesCategoryMap = {}, appInterfacesConst = [], appInterfaces;
             dir = dir.map((item) => {
                 return `${target}/${item}`;
             });
@@ -557,17 +607,21 @@ const runPlugins = (item) => {
                 if ((yield stat(item)).isDirectory()) {
                     let packagePath = `${item}/package.json`;
                     if (fs.existsSync(packagePath)) {
-                        let data = yield readFile(packagePath), dataC = JSON.parse(data), main = dataC.main, docs = dataC.docs, appName = `app.${docs.name}`, category = dataC.category, content = yield readFile(`${item}/${main}`);
+                        let data = yield readFile(packagePath), dataC = JSON.parse(data), main = dataC.main, docs = dataC.docs, appName = `app.${docs.name}`, category = dataC.category, dependencies = [], content = yield readFile(`${item}/${main}`);
                         if (docs) {
                             if (typeof eval(content) === 'function') {
                                 content = (eval(content)).toString();
-                                // if (dataC.edition) {
-                                //     appName = dataC.edition;
-                                // }
                                 if ((docs.belongTo === 'class' || docs.belongTo === 'closure') && content.substr(-2, 2) !== '()' && content.substr(-3, 3) !== '();') {
                                     content = content + '()';
                                 }
-                                jsContent = [...jsContent, `${appName}=${content}`];
+                                if (dataC.dependencies) {
+                                    for (let key in dataC.dependencies) {
+                                        dependencies.push(`'${key}'`);
+                                    }
+                                    //    dependencies=Object.keys(dataC.dependencies);
+                                }
+                                requireApp.push(`'${appName}'`);
+                                jsContent = [...jsContent, `define('${appName}',[${[...dependencies]}],function () {${appName}=${content}})`];
                             }
                             if (dataC.const && dataC.const.length) {
                                 constMap[docs.name] = dataC.const;
@@ -602,21 +656,14 @@ const runPlugins = (item) => {
                     appInterfacesConst:${JSON.stringify(appInterfacesConst, null, 4)}
                 }
                 })`);
-            yield writeFile(`target/webapp/dependence/AWEB/js/aweb.api.js`, `define(["jquery"],function($){${jsContent.join(`;\n`)}})`);
-            yield writeFile(`src/main/webapp/dependence/AWEB/js/aweb.api.js`, `define(["jquery"],function($){${jsContent.join(`;\n`)}})`);
+            let content = `define(["jquery"],function($){${jsContent.join(`;\n`)};  require([${[...requireApp]} ]) })`.replace(/@aweb-plugins\//g, '');
+            yield writeFile(`target/webapp/dependence/AWEB/js/aweb.api.js`, content);
+            yield writeFile(`src/main/webapp/dependence/AWEB/js/aweb.api.js`, content);
+            console.log("编译aweb.api.js完成");
         }
         catch (e) {
             console.log(e);
         }
-        // await initPluginsIndex();
-        //  gulp.src(item.source)
-        //     .pipe(webpack(webpackConfig))
-        //     .pipe(rename({
-        //         basename: "aweb.api",
-        //         extname: ".js"
-        //     }))
-        //     .pipe(gulp.dest(item.dest))
-        //     .pipe(gulp.dest(item._dest))
     });
 };
 const compileLess = () => {
@@ -677,8 +724,9 @@ const compilePluigs = () => __awaiter(this, void 0, void 0, function* () {
         watch(plugins.watch, runPlugins(plugins));
     }
 });
-const compilePageModule = (target = `${__dirname}/src/main/webapp/module`) => {
-    return node_fetch_1.default("http://127.0.0.1:7350/compiler", {
+const compilePageModule = (target = `${__dirname}/src/main/webapp/module`) => __awaiter(this, void 0, void 0, function* () {
+    let data = yield readFile('./package.json');
+    return node_fetch_1.default(`http://127.0.0.1:${JSON.parse(data).port || 7350}/compiler`, {
         method: 'post',
         headers: {
             'Content-Type': 'application/json'
@@ -696,7 +744,7 @@ const compilePageModule = (target = `${__dirname}/src/main/webapp/module`) => {
         console.log(json.msg);
         return Promise.resolve();
     });
-};
+});
 const compileNsl = () => {
     let nsl = config.nsl;
     runNsl(nsl)();
@@ -710,10 +758,11 @@ const compileNsl = () => {
     let initKey = Object.keys(initConfig);
     initKey.forEach((i) => {
         initTask.push(`init${i}`);
-        gulp.task(`init${i}`, (done) => {
-            isWatch = false;
-            run(initConfig[i])();
-            done();
+        gulp.task(`init${i}`, () => {
+            return new Promise(function (resolve, reject) {
+                isWatch = false;
+                run(initConfig[i], resolve)();
+            });
         });
     });
 }());
@@ -728,9 +777,6 @@ gulp.task('widget', (done) => {
     compileStatic();
     done();
 });
-// gulp.task('pageModule',async()=>{
-//     await compilePageModule();
-// })
 gulp.task('pageModule', () => __awaiter(this, void 0, void 0, function* () {
     let argv, filePath;
     try {
@@ -762,21 +808,17 @@ gulp.task('plugins', () => __awaiter(this, void 0, void 0, function* () {
     isWatch = false;
     yield compilePluigs();
 }));
-gulp.task('copy', gulp.series(...initTask, () => __awaiter(this, void 0, void 0, function* () {
+gulp.task('copy', gulp.series(...initTask));
+gulp.task('init', gulp.series('copy', () => __awaiter(this, void 0, void 0, function* () {
     isWatch = false;
     yield compileBootloader();
+    yield compilePluigs();
+    yield compilePageModule();
+    let data = yield readFile('./package.json'), data_json = JSON.parse(data);
+    data_json.scripts.watch = `gulp watch`;
+    yield writeFile('./package.json', JSON.stringify(data_json, null, 4));
 })));
-gulp.task('watch', () => {
-    isWatch = true;
-    compileJs();
-    compileCss();
-    compileLess();
-    compileStatic();
-    compileBootloader();
-    compilePluigs();
-    compileNsl();
-});
-gulp.task('default', gulp.series('plugins', () => __awaiter(this, void 0, void 0, function* () {
+gulp.task('compile', gulp.series('plugins', () => __awaiter(this, void 0, void 0, function* () {
     isWatch = false;
     compileJs();
     compileCss();
@@ -785,5 +827,15 @@ gulp.task('default', gulp.series('plugins', () => __awaiter(this, void 0, void 0
     compileBootloader();
     compileNsl();
     yield compilePageModule();
+})));
+gulp.task('watch', gulp.series('compile', () => __awaiter(this, void 0, void 0, function* () {
+    isWatch = true;
+    compileJs();
+    compileCss();
+    compileLess();
+    compileStatic();
+    compileBootloader();
+    compilePluigs();
+    compileNsl();
 })));
 //# sourceMappingURL=gulpfile.js.map
