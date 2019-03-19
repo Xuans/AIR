@@ -16,21 +16,65 @@
     "AWEB/css/aweb.popover.css": "AWEB/css/aweb.popover.css",
     "AUI/css/component.foundationForm.foundationSelectIcon.css": "component.foundationForm.foundationSelectIcon/css/component.foundationForm.foundationSelectIcon.css",
     "AUI/css/component.foundationForm.foundationWysiwyg.css": "component.foundationForm.foundationWysiwyg/css/component.foundationForm.foundationWysiwyg.css",
-    "custom.AIR_tettt/css/custom.AIR_tettt.css": "custom.AIR_tettt/css/custom.AIR_tettt.css",
-    "custom.AIR_tttt/css/custom.AIR_tttt.css": "custom.AIR_tttt/css/custom.AIR_tttt.css",
+    "custom.Update2_awl/css/custom.Update2_awl.css": "custom.Update2_awl/css/custom.Update2_awl.css",
+    "AUI/css/mobile.SoYComponent.SoYActionSheet.css": "mobile.SoYComponent.SoYActionSheet/css/mobile.SoYComponent.SoYActionSheet.css",
+    "AWEB/css/font-awesome.min.css": "AWEB/css/font-awesome.min.css",
+    "AUI/css/mobile.SoYComponent.SoYBudget.css": "mobile.SoYComponent.SoYBudget/css/mobile.SoYComponent.SoYBudget.css",
+    "AUI/css/mobile.SoYComponent.SoYCalendar.css": "mobile.SoYComponent.SoYCalendar/css/mobile.SoYComponent.SoYCalendar.css",
+    "AUI/css/mobile.SoYComponent.SoYCard.css": "mobile.SoYComponent.SoYCard/css/mobile.SoYComponent.SoYCard.css",
+    "AUI/css/mobile.SoYComponent.SoYCarouselFigure.css": "mobile.SoYComponent.SoYCarouselFigure/css/mobile.SoYComponent.SoYCarouselFigure.css",
+    "AUI/css/mobile.SoYComponent.SoYCheckList.css": "mobile.SoYComponent.SoYCheckList/css/mobile.SoYComponent.SoYCheckList.css",
+    "AUI/css/mobile.SoYComponent.SoYCircleChart.css": "mobile.SoYComponent.SoYCircleChart/css/mobile.SoYComponent.SoYCircleChart.css",
+    "AUI/css/mobile.SoYComponent.SoYGrid.css": "mobile.SoYComponent.SoYGrid/css/mobile.SoYComponent.SoYGrid.css",
+    "AUI/css/mobile.SoYComponent.SoYInputItem.css": "mobile.SoYComponent.SoYInputItem/css/mobile.SoYComponent.SoYInputItem.css",
+    "AUI/css/mobile.SoYComponent.SoYList.css": "mobile.SoYComponent.SoYList/css/mobile.SoYComponent.SoYList.css",
+    "AUI/css/mobile.SoYComponent.SoYPictureUpload.css": "mobile.SoYComponent.SoYPictureUpload/css/mobile.SoYComponent.SoYPictureUpload.css",
+    "AUI/css/mobile.SoYComponent.SoYProgress.css": "mobile.SoYComponent.SoYProgress/css/mobile.SoYComponent.SoYProgress.css",
+    "AUI/css/mobile.SoYComponent.SoYRadioList.css": "mobile.SoYComponent.SoYRadioList/css/mobile.SoYComponent.SoYRadioList.css",
+    "AUI/css/mobile.SoYComponent.SoYSearch.css": "mobile.SoYComponent.SoYSearch/css/mobile.SoYComponent.SoYSearch.css",
+    "AUI/css/mobile.SoYComponent.SoYStepper.css": "mobile.SoYComponent.SoYStepper/css/mobile.SoYComponent.SoYStepper.css",
+    "AUI/css/mobile.SoYComponent.SoYSwitch.css": "mobile.SoYComponent.SoYSwitch/css/mobile.SoYComponent.SoYSwitch.css",
+    "AUI/css/mobile.SoYComponent.SoYValLine.css": "mobile.SoYComponent.SoYValLine/css/mobile.SoYComponent.SoYValLine.css",
+    "AUI/css/mobile.SoYLayout.indexLayout.css": "mobile.SoYLayout.indexLayout/css/mobile.SoYLayout.indexLayout.css",
+    "AUI/css/mobile.SoYLayout.mobileDrawer.css": "mobile.SoYLayout.mobileDrawer/css/mobile.SoYLayout.mobileDrawer.css",
+    "AUI/css/mobile.SoYLayout.mobileLayout.css": "mobile.SoYLayout.mobileLayout/css/mobile.SoYLayout.mobileLayout.css",
+    "AUI/css/mobile.SoYLayout.mobileTab.css": "mobile.SoYLayout.mobileTab/css/mobile.SoYLayout.mobileTab.css",
+    "AUI/css/monitor.MComponent.MBaseConfig.css": "monitor.MComponent.MBaseConfig/css/monitor.MComponent.MBaseConfig.css",
+    "AUI/css/monitor.MComponent.MCascader.css": "monitor.MComponent.MCascader/css/monitor.MComponent.MCascader.css",
+    "AUI/css/monitor.MComponent.MCheckIpt.css": "monitor.MComponent.MCheckIpt/css/monitor.MComponent.MCheckIpt.css",
+    "AUI/css/monitor.MComponent.MComponentCard.css": "monitor.MComponent.MComponentCard/css/monitor.MComponent.MComponentCard.css",
+    "AUI/css/monitor.MComponent.MDataDisplay.css": "monitor.MComponent.MDataDisplay/css/monitor.MComponent.MDataDisplay.css",
+    "AUI/css/monitor.MComponent.MDigitroll.css": "monitor.MComponent.MDigitroll/css/monitor.MComponent.MDigitroll.css",
+    "AUI/css/monitor.MComponent.MDropDownFilter.css": "monitor.MComponent.MDropDownFilter/css/monitor.MComponent.MDropDownFilter.css",
+    "AUI/css/monitor.MComponent.MGirdValue.css": "monitor.MComponent.MGirdValue/css/monitor.MComponent.MGirdValue.css",
+    "AUI/css/monitor.MComponent.MInputItem.css": "monitor.MComponent.MInputItem/css/monitor.MComponent.MInputItem.css",
+    "AUI/css/monitor.MComponent.MMessageList.css": "monitor.MComponent.MMessageList/css/monitor.MComponent.MMessageList.css",
+    "AUI/css/monitor.MComponent.MPagination.css": "monitor.MComponent.MPagination/css/monitor.MComponent.MPagination.css",
+    "AUI/css/monitor.MComponent.MPolymorphicTable.css": "monitor.MComponent.MPolymorphicTable/css/monitor.MComponent.MPolymorphicTable.css",
+    "AUI/css/monitor.MComponent.MProductMgr.css": "monitor.MComponent.MProductMgr/css/monitor.MComponent.MProductMgr.css",
+    "AUI/css/monitor.MComponent.MProductPanel.css": "monitor.MComponent.MProductPanel/css/monitor.MComponent.MProductPanel.css",
+    "AUI/css/monitor.MComponent.MSelectBtnGroup.css": "monitor.MComponent.MSelectBtnGroup/css/monitor.MComponent.MSelectBtnGroup.css",
+    "AUI/css/monitor.MComponent.MStatusDashBoard.css": "monitor.MComponent.MStatusDashBoard/css/monitor.MComponent.MStatusDashBoard.css",
+    "AUI/css/monitor.MComponent.MTimepicker.css": "monitor.MComponent.MTimepicker/css/monitor.MComponent.MTimepicker.css",
+    "AUI/css/monitor.MLayout.MFlexRowCtn.css": "monitor.MLayout.MFlexRowCtn/css/monitor.MLayout.MFlexRowCtn.css",
     "handsonTable/css/handsontable.min.css": "Handsontable/css/handsontable.min.css",
     "MultiplePicUpload/MultiplePicUpload.css": "MultiplePicUpload/MultiplePicUpload.css",
     "aweb-window-layout.css": "aweb-window-layout/style.css",
     "aweb-window-layout-iconfont.css": "aweb-window-layout/iconfont/iconfont.css",
     "switcher/css/bootstrap-switch.css": "bootstrap-switch/css/bootstrap-switch.css",
+    "bootstrapTable/css/bootstrapTable.css": "bootstrapTable/css/bootstrapTable.css",
     "bootstrap_datepicker/css/bootstrap-eedatepicker.css": "bootstrap_datepicker/css/bootstrap-datepicker.css",
+    "baseConfig/css/bundle.css": "bundle/css/bundle.css",
     "chosen-jquery/css/chosen.css": "chosen.jquery/css/chosen.css",
+    "componentTreeV2/css/componentTree.css": "componentTreeV2/css/componentTree.css",
     "jQuery.dataTables/css/buttons.dataTables.min.css": "dataTables.buttons.min/css/buttons.dataTables.min.css",
     "jQuery.dataTables/css/editor.dataTables.min.css": "dataTables.editor.min/css/editor.dataTables.min.css",
     "jQuery.dataTables/css/fixedColumns.dataTables.css": "dataTables.fixedColumns.min/css/fixedColumns.dataTables.css",
     "jQuery.dataTables/css/select.dataTables.min.css": "dataTables.select.min/css/select.dataTables.min.css",
+    "easyPopover/css/easyPopover.css": "easypopover/css/easypopover.css",
     "easyui-combotree/easyui.css": "easyui/easyui.css",
     "editableSilder/css/foundationEditableSilder.css": "editableSilder/css/foundationEditableSilder.css",
+    "md/editormd.css": "editormd/css/editormd.css",
     "fileUploadBtn/fileUploadBtn.css": "fileUploadBtn/css/fileUploadBtn.css",
     "flatpickr/css/flatpickr.css": "flatpickr/css/flatpickr.css",
     "foundation/css/foundation.css": "foundation/css/foundation.css",
@@ -44,13 +88,13 @@
     "handsonTable/css/pikaday.css": "pikaday/css/pikaday.css",
     "stepCtn/stepCtn.css": "stepCtn/css/stepCtn.css",
     "timeLine/css/timeLine.css": "timeLine/css/timeLine.css",
+    "timepicker/css/jquery_ui_timepicker_addon.css": "timepicker/css/jquery_ui_timepicker_addon.css",
     "topNav/topNav.css": "topNav/topNav.css",
     "wangEditor/css/wangEditor.min.css": "wangEditor/css/wangEditor.min.css",
     "jQuery.zTree/css/awesome.css": "zTree/css/awesome.css",
     "AWEB/css/am.css": "AWEB/css/am.css",
     "AWEB/css/aweb.css": "AWEB/css/aweb.css",
     "AWEB/css/aweb.page.css": "AWEB/css/aweb.page.css",
-    "AWEB/css/font-awesome.min.css": "AWEB/css/font-awesome.min.css",
     "AWEB/css/icon-font.css": "AWEB/css/icon-font.css",
     "AWEB/css/soy.css": "AWEB/css/soy.css"
 } || {};
@@ -368,13 +412,13 @@
         "name": "ctn.modalCtn",
         "path": "dependence/ctn.modalCtn/js/ctn.modalCtn.js"
     },
-    "custom.AIR_tettt": {
-        "name": "custom.AIR_tettt",
-        "path": "dependence/custom.AIR_tettt/js/custom.AIR_tettt.js"
+    "custom.Update2_awl": {
+        "name": "custom.Update2_awl",
+        "path": "dependence/custom.Update2_awl/js/custom.Update2_awl.js"
     },
-    "custom.AIR_tttt": {
-        "name": "custom.AIR_tttt",
-        "path": "dependence/custom.AIR_tttt/js/custom.AIR_tttt.js"
+    "layout": {
+        "name": "layout",
+        "path": "dependence/layout/index.js"
     },
     "layout.rowCtn": {
         "name": "layout.rowCtn",
@@ -388,6 +432,222 @@
         "name": "layout.tabCtn",
         "path": "dependence/layout.tabCtn/js/layout.tabCtn.js"
     },
+    "mobile.SoYComponent.SoYActionSheet": {
+        "name": "mobile.SoYComponent.SoYActionSheet",
+        "path": "dependence/mobile.SoYComponent.SoYActionSheet/js/mobile.SoYComponent.SoYActionSheet.js"
+    },
+    "mobile.SoYComponent.SoYArticle": {
+        "name": "mobile.SoYComponent.SoYArticle",
+        "path": "dependence/mobile.SoYComponent.SoYArticle/js/mobile.SoYComponent.SoYArticle.js"
+    },
+    "mobile.SoYComponent.SoYBudget": {
+        "name": "mobile.SoYComponent.SoYBudget",
+        "path": "dependence/mobile.SoYComponent.SoYBudget/js/mobile.SoYComponent.SoYBudget.js"
+    },
+    "mobile.SoYComponent.SoYCalendar": {
+        "name": "mobile.SoYComponent.SoYCalendar",
+        "path": "dependence/mobile.SoYComponent.SoYCalendar/js/mobile.SoYComponent.SoYCalendar.js"
+    },
+    "mobile.SoYComponent.SoYCard": {
+        "name": "mobile.SoYComponent.SoYCard",
+        "path": "dependence/mobile.SoYComponent.SoYCard/js/mobile.SoYComponent.SoYCard.js"
+    },
+    "mobile.SoYComponent.SoYCarouselFigure": {
+        "name": "mobile.SoYComponent.SoYCarouselFigure",
+        "path": "dependence/mobile.SoYComponent.SoYCarouselFigure/js/mobile.SoYComponent.SoYCarouselFigure.js"
+    },
+    "mobile.SoYComponent.SoYCheckList": {
+        "name": "mobile.SoYComponent.SoYCheckList",
+        "path": "dependence/mobile.SoYComponent.SoYCheckList/js/mobile.SoYComponent.SoYCheckList.js"
+    },
+    "mobile.SoYComponent.SoYCircleChart": {
+        "name": "mobile.SoYComponent.SoYCircleChart",
+        "path": "dependence/mobile.SoYComponent.SoYCircleChart/js/mobile.SoYComponent.SoYCircleChart.js"
+    },
+    "mobile.SoYComponent.SoYGrid": {
+        "name": "mobile.SoYComponent.SoYGrid",
+        "path": "dependence/mobile.SoYComponent.SoYGrid/js/mobile.SoYComponent.SoYGrid.js"
+    },
+    "mobile.SoYComponent.SoYIconBtn": {
+        "name": "mobile.SoYComponent.SoYIconBtn",
+        "path": "dependence/mobile.SoYComponent.SoYIconBtn/js/mobile.SoYComponent.SoYIconBtn.js"
+    },
+    "mobile.SoYComponent.SoYInputItem": {
+        "name": "mobile.SoYComponent.SoYInputItem",
+        "path": "dependence/mobile.SoYComponent.SoYInputItem/js/mobile.SoYComponent.SoYInputItem.js"
+    },
+    "mobile.SoYComponent.SoYKChart": {
+        "name": "mobile.SoYComponent.SoYKChart",
+        "path": "dependence/mobile.SoYComponent.SoYKChart/js/mobile.SoYComponent.SoYKChart.js"
+    },
+    "mobile.SoYComponent.SoYLineChart": {
+        "name": "mobile.SoYComponent.SoYLineChart",
+        "path": "dependence/mobile.SoYComponent.SoYLineChart/js/mobile.SoYComponent.SoYLineChart.js"
+    },
+    "mobile.SoYComponent.SoYList": {
+        "name": "mobile.SoYComponent.SoYList",
+        "path": "dependence/mobile.SoYComponent.SoYList/js/mobile.SoYComponent.SoYList.js"
+    },
+    "mobile.SoYComponent.SoYPictureUpload": {
+        "name": "mobile.SoYComponent.SoYPictureUpload",
+        "path": "dependence/mobile.SoYComponent.SoYPictureUpload/js/mobile.SoYComponent.SoYPictureUpload.js"
+    },
+    "mobile.SoYComponent.SoYPieChart": {
+        "name": "mobile.SoYComponent.SoYPieChart",
+        "path": "dependence/mobile.SoYComponent.SoYPieChart/js/mobile.SoYComponent.SoYPieChart.js"
+    },
+    "mobile.SoYComponent.SoYProgress": {
+        "name": "mobile.SoYComponent.SoYProgress",
+        "path": "dependence/mobile.SoYComponent.SoYProgress/js/mobile.SoYComponent.SoYProgress.js"
+    },
+    "mobile.SoYComponent.SoYRadioList": {
+        "name": "mobile.SoYComponent.SoYRadioList",
+        "path": "dependence/mobile.SoYComponent.SoYRadioList/js/mobile.SoYComponent.SoYRadioList.js"
+    },
+    "mobile.SoYComponent.SoYSearch": {
+        "name": "mobile.SoYComponent.SoYSearch",
+        "path": "dependence/mobile.SoYComponent.SoYSearch/js/mobile.SoYComponent.SoYSearch.js"
+    },
+    "mobile.SoYComponent.SoYSlider": {
+        "name": "mobile.SoYComponent.SoYSlider",
+        "path": "dependence/mobile.SoYComponent.SoYSlider/js/mobile.SoYComponent.SoYSlider.js"
+    },
+    "mobile.SoYComponent.SoYStepper": {
+        "name": "mobile.SoYComponent.SoYStepper",
+        "path": "dependence/mobile.SoYComponent.SoYStepper/js/mobile.SoYComponent.SoYStepper.js"
+    },
+    "mobile.SoYComponent.SoYSwitch": {
+        "name": "mobile.SoYComponent.SoYSwitch",
+        "path": "dependence/mobile.SoYComponent.SoYSwitch/js/mobile.SoYComponent.SoYSwitch.js"
+    },
+    "mobile.SoYComponent.SoYValLine": {
+        "name": "mobile.SoYComponent.SoYValLine",
+        "path": "dependence/mobile.SoYComponent.SoYValLine/js/mobile.SoYComponent.SoYValLine.js"
+    },
+    "mobile.SoYCtn.mobileCtn": {
+        "name": "mobile.SoYCtn.mobileCtn",
+        "path": "dependence/mobile.SoYCtn.mobileCtn/js/mobile.SoYCtn.mobileCtn.js"
+    },
+    "mobile.SoYLayout.indexLayout": {
+        "name": "mobile.SoYLayout.indexLayout",
+        "path": "dependence/mobile.SoYLayout.indexLayout/js/mobile.SoYLayout.indexLayout.js"
+    },
+    "mobile.SoYLayout.mobileDrawer": {
+        "name": "mobile.SoYLayout.mobileDrawer",
+        "path": "dependence/mobile.SoYLayout.mobileDrawer/js/mobile.SoYLayout.mobileDrawer.js"
+    },
+    "mobile.SoYLayout.mobileLayout": {
+        "name": "mobile.SoYLayout.mobileLayout",
+        "path": "dependence/mobile.SoYLayout.mobileLayout/js/mobile.SoYLayout.mobileLayout.js"
+    },
+    "mobile.SoYLayout.mobileTab": {
+        "name": "mobile.SoYLayout.mobileTab",
+        "path": "dependence/mobile.SoYLayout.mobileTab/js/mobile.SoYLayout.mobileTab.js"
+    },
+    "monitor.MComponent.MAsideMenu": {
+        "name": "monitor.MComponent.MAsideMenu",
+        "path": "dependence/monitor.MComponent.MAsideMenu/js/monitor.MComponent.MAsideMenu.js"
+    },
+    "monitor.MComponent.MBaseConfig": {
+        "name": "monitor.MComponent.MBaseConfig",
+        "path": "dependence/monitor.MComponent.MBaseConfig/js/monitor.MComponent.MBaseConfig.js"
+    },
+    "monitor.MComponent.MCascader": {
+        "name": "monitor.MComponent.MCascader",
+        "path": "dependence/monitor.MComponent.MCascader/js/monitor.MComponent.MCascader.js"
+    },
+    "monitor.MComponent.MCheckIpt": {
+        "name": "monitor.MComponent.MCheckIpt",
+        "path": "dependence/monitor.MComponent.MCheckIpt/js/monitor.MComponent.MCheckIpt.js"
+    },
+    "monitor.MComponent.MComponentCard": {
+        "name": "monitor.MComponent.MComponentCard",
+        "path": "dependence/monitor.MComponent.MComponentCard/js/monitor.MComponent.MComponentCard.js"
+    },
+    "monitor.MComponent.MComponentTree": {
+        "name": "monitor.MComponent.MComponentTree",
+        "path": "dependence/monitor.MComponent.MComponentTree/js/monitor.MComponent.MComponentTree.js"
+    },
+    "monitor.MComponent.MDataDisplay": {
+        "name": "monitor.MComponent.MDataDisplay",
+        "path": "dependence/monitor.MComponent.MDataDisplay/js/monitor.MComponent.MDataDisplay.js"
+    },
+    "monitor.MComponent.MDigitroll": {
+        "name": "monitor.MComponent.MDigitroll",
+        "path": "dependence/monitor.MComponent.MDigitroll/js/monitor.MComponent.MDigitroll.js"
+    },
+    "monitor.MComponent.MDropDownFilter": {
+        "name": "monitor.MComponent.MDropDownFilter",
+        "path": "dependence/monitor.MComponent.MDropDownFilter/js/monitor.MComponent.MDropDownFilter.js"
+    },
+    "monitor.MComponent.MGirdValue": {
+        "name": "monitor.MComponent.MGirdValue",
+        "path": "dependence/monitor.MComponent.MGirdValue/js/monitor.MComponent.MGirdValue.js"
+    },
+    "monitor.MComponent.MInputItem": {
+        "name": "monitor.MComponent.MInputItem",
+        "path": "dependence/monitor.MComponent.MInputItem/js/monitor.MComponent.MInputItem.js"
+    },
+    "monitor.MComponent.MMessageList": {
+        "name": "monitor.MComponent.MMessageList",
+        "path": "dependence/monitor.MComponent.MMessageList/js/monitor.MComponent.MMessageList.js"
+    },
+    "monitor.MComponent.MPagination": {
+        "name": "monitor.MComponent.MPagination",
+        "path": "dependence/monitor.MComponent.MPagination/js/monitor.MComponent.MPagination.js"
+    },
+    "monitor.MComponent.MPolymorphicTable": {
+        "name": "monitor.MComponent.MPolymorphicTable",
+        "path": "dependence/monitor.MComponent.MPolymorphicTable/js/monitor.MComponent.MPolymorphicTable.js"
+    },
+    "monitor.MComponent.MProductMgr": {
+        "name": "monitor.MComponent.MProductMgr",
+        "path": "dependence/monitor.MComponent.MProductMgr/js/monitor.MComponent.MProductMgr.js"
+    },
+    "monitor.MComponent.MProductPanel": {
+        "name": "monitor.MComponent.MProductPanel",
+        "path": "dependence/monitor.MComponent.MProductPanel/js/monitor.MComponent.MProductPanel.js"
+    },
+    "monitor.MComponent.MSelectBtnGroup": {
+        "name": "monitor.MComponent.MSelectBtnGroup",
+        "path": "dependence/monitor.MComponent.MSelectBtnGroup/js/monitor.MComponent.MSelectBtnGroup.js"
+    },
+    "monitor.MComponent.MStatusDashBoard": {
+        "name": "monitor.MComponent.MStatusDashBoard",
+        "path": "dependence/monitor.MComponent.MStatusDashBoard/js/monitor.MComponent.MStatusDashBoard.js"
+    },
+    "monitor.MComponent.MTimepicker": {
+        "name": "monitor.MComponent.MTimepicker",
+        "path": "dependence/monitor.MComponent.MTimepicker/js/monitor.MComponent.MTimepicker.js"
+    },
+    "monitor.MEcharts": {
+        "name": "monitor.MEcharts",
+        "path": "dependence/monitor.MEcharts/js/monitor.MEcharts.js"
+    },
+    "monitor.MEcharts.M3Dbar": {
+        "name": "monitor.MEcharts.M3Dbar",
+        "path": "dependence/monitor.MEcharts.M3Dbar/js/monitor.MEcharts.M3Dbar.js"
+    },
+    "monitor.MEcharts.MCustomizedPie": {
+        "name": "monitor.MEcharts.MCustomizedPie",
+        "path": "dependence/monitor.MEcharts.MCustomizedPie/js/monitor.MEcharts.MCustomizedPie.js"
+    },
+    "monitor.MEcharts.MMixedColumnChart": {
+        "name": "monitor.MEcharts.MMixedColumnChart",
+        "path": "dependence/monitor.MEcharts.MMixedColumnChart/js/monitor.MEcharts.MMixedColumnChart.js"
+    },
+    "monitor.MEcharts.MPlusMinusColumn": {
+        "name": "monitor.MEcharts.MPlusMinusColumn",
+        "path": "dependence/monitor.MEcharts.MPlusMinusColumn/js/monitor.MEcharts.MPlusMinusColumn.js"
+    },
+    "monitor.MEcharts.MStackedArea": {
+        "name": "monitor.MEcharts.MStackedArea",
+        "path": "dependence/monitor.MEcharts.MStackedArea/js/monitor.MEcharts.MStackedArea.js"
+    },
+    "monitor.MLayout.MFlexRowCtn": {
+        "name": "monitor.MLayout.MFlexRowCtn",
+        "path": "dependence/monitor.MLayout.MFlexRowCtn/js/monitor.MLayout.MFlexRowCtn.js"
+    },
     "page.mainPanel": {
         "name": "page.mainPanel",
         "path": "dependence/page.mainPanel/index.js"
@@ -400,6 +660,11 @@
         "name": "MultiplePicUpload",
         "path": "dependence/MultiplePicUpload/index.js"
     },
+    "Raphael": {
+        "name": "Raphael",
+        "path": "dependence/Raphael/js/raphael.min",
+        "exports": "Raphael"
+    },
     "aweb-window-layout": {
         "name": "aweb-window-layout",
         "path": "dependence/aweb-window-layout/index.js",
@@ -410,6 +675,15 @@
             "app.hsla"
         ]
     },
+    "baseConfig": {
+        "name": "baseConfig",
+        "path": "dependence/baseConfig/js/base",
+        "deps": [
+            "bundle",
+            "template",
+            "vue"
+        ]
+    },
     "bootstrap-switch": {
         "name": "bootstrap-switch",
         "path": "dependence/bootstrap-switch/js/bootstrap-switch"
@@ -418,9 +692,34 @@
         "name": "bootstrap-wysiwyg",
         "path": "dependence/bootstrap-wysiwyg/js/bootstrap-wysiwyg.js"
     },
+    "bootstrapTable": {
+        "name": "bootstrapTable",
+        "path": "dependence/bootstrapTable/js/bootstrapTable.min",
+        "exports": "bootstrapTable"
+    },
+    "bootstrapTableTreegrid": {
+        "name": "bootstrapTableTreegrid",
+        "path": "dependence/bootstrapTableTreegrid/js/bootstrap-table-treegrid.min",
+        "deps": [
+            "bootstrapTable",
+            "jquery"
+        ]
+    },
+    "bootstrapTableTreegridJq": {
+        "name": "bootstrapTableTreegridJq",
+        "path": "dependence/bootstrapTableTreegridJq/js/jquery.treegrid.min"
+    },
     "bootstrap_datepicker": {
         "name": "bootstrap_datepicker",
         "path": "dependence/bootstrap_datepicker/js/bootstrap-datepicker.min"
+    },
+    "bscroll": {
+        "name": "bscroll",
+        "path": "dependence/bscroll/js/betterScroll"
+    },
+    "bundle": {
+        "name": "bundle",
+        "path": "dependence/bundle/js/bundle"
     },
     "chosen.jquery": {
         "name": "chosen.jquery",
@@ -429,6 +728,10 @@
     "ckEditor": {
         "name": "ckEditor",
         "path": "dependence/ckEditor/js/ckeditor"
+    },
+    "componentTreeV2": {
+        "name": "componentTreeV2",
+        "path": "dependence/componentTreeV2/js/componentTree.js"
     },
     "dataTables.buttons.min": {
         "name": "dataTables.buttons.min",
@@ -446,6 +749,17 @@
         "name": "dataTables.select.min",
         "path": "dependence/dataTables.select.min/js/dataTables.select.min"
     },
+    "digitroll": {
+        "name": "digitroll",
+        "path": "dependence/digitroll/js/digitroll.min"
+    },
+    "easypopover": {
+        "name": "easypopover",
+        "path": "dependence/easypopover/js/easyPopover.js",
+        "deps": [
+            "jquery"
+        ]
+    },
     "easyui": {
         "name": "easyui",
         "path": "dependence/easyui/js/jquery.easyui.min",
@@ -459,9 +773,21 @@
         "path": "dependence/echarts/js/echarts.min",
         "exports": "echarts"
     },
+    "echarts-gl": {
+        "name": "echarts-gl",
+        "path": "dependence/echarts-gl/js/echarts-gl.min"
+    },
+    "echarts4.2": {
+        "name": "echarts4.2",
+        "path": "dependence/echarts4.2/js/echarts-4.2.0.min"
+    },
     "editableSilder": {
         "name": "editableSilder",
         "path": "dependence/editableSilder/index.js"
+    },
+    "editormd": {
+        "name": "editormd",
+        "path": "dependence/editormd/js/editormd"
     },
     "fileUpload": {
         "name": "fileUpload",
@@ -478,9 +804,20 @@
         "name": "flatpickr",
         "path": "dependence/flatpickr/js/flatpickr"
     },
+    "flowchart": {
+        "name": "flowchart",
+        "path": "dependence/flowchart/js/flowchart.min"
+    },
     "foundation": {
         "name": "foundation",
         "path": "dependence/foundation/js/foundation.js"
+    },
+    "jQueryFlowchart": {
+        "name": "jQueryFlowchart",
+        "path": "dependence/jQueryFlowchart/js/jquery.flowchart.min",
+        "deps": [
+            "flowchart"
+        ]
     },
     "jquery": {
         "name": "jquery",
@@ -518,6 +855,11 @@
         "name": "loginCtn",
         "path": "dependence/loginCtn/index.js"
     },
+    "marked": {
+        "name": "marked",
+        "path": "dependence/marked/js/marked.min",
+        "exports": "marked"
+    },
     "moment": {
         "name": "moment",
         "path": "dependence/moment/js/moment"
@@ -526,9 +868,20 @@
         "name": "multiselect",
         "path": "dependence/multiselect/js/multiselect.js"
     },
+    "pagination": {
+        "name": "pagination",
+        "path": "dependence/pagination/js/jquery.pagination.js",
+        "deps": [
+            "jquery"
+        ]
+    },
     "pikaday": {
         "name": "pikaday",
         "path": "dependence/pikaday/js/pikaday"
+    },
+    "prettify": {
+        "name": "prettify",
+        "path": "dependence/prettify/js/prettify.min"
     },
     "progressbar": {
         "name": "progressbar",
@@ -542,6 +895,14 @@
         "name": "requireJS",
         "path": "dependence/requireJS/js/require.js"
     },
+    "sequenceDiagram": {
+        "name": "sequenceDiagram",
+        "path": "dependence/sequenceDiagram/js/sequence-diagram.min",
+        "deps": [
+            "Raphael",
+            "underscore"
+        ]
+    },
     "slimScroll": {
         "name": "slimScroll",
         "path": "dependence/slimScroll/js/jquery.slimscroll.min",
@@ -552,6 +913,10 @@
     "stepCtn": {
         "name": "stepCtn",
         "path": "dependence/stepCtn/index.js"
+    },
+    "taffydb": {
+        "name": "taffydb",
+        "path": "dependence/taffydb/js/jquery.slimscroll.min"
     },
     "template": {
         "name": "template",
@@ -565,9 +930,32 @@
         "name": "timeLine",
         "path": "dependence/timeLine/index.js"
     },
+    "timepicker": {
+        "name": "timepicker",
+        "path": "dependence/timepicker/js/jquery_ui_timepicker_addon.js",
+        "deps": [
+            "jquery"
+        ]
+    },
+    "timepickerSliderAccess": {
+        "name": "timepickerSliderAccess",
+        "path": "dependence/timepickerSliderAccess/js/jquery_ui_sliderAccess.js",
+        "deps": [
+            "jquery"
+        ]
+    },
     "topNav": {
         "name": "topNav",
         "path": "dependence/topNav/index.js"
+    },
+    "underscore": {
+        "name": "underscore",
+        "path": "dependence/underscore/js/underscore.min",
+        "exports": "_"
+    },
+    "vue": {
+        "name": "vue",
+        "path": "dependence/vue/js/vue"
     },
     "wangEditor": {
         "name": "wangEditor",

@@ -1,0 +1,103 @@
+/*PROJECT-THEME-VAR_START*/
+/*PROJECT-THEME-VAR_END*/
+.default-theme {
+  /*46DCE4459D007DB597E0-8A58_START*/
+  /*46DCE4459D007DB597E0-8A58_END*/
+  /*AA23ED2272D454C5B38E-D361_START*/
+  /*AA23ED2272D454C5B38E-D361_END*/
+  /*D6A7C216DDB52D5F7F5E-9928_START*/
+  /*D6A7C216DDB52D5F7F5E-9928_END*/
+  /*B20AFCB49AE47312BDD2-4511_START*/
+  /*B20AFCB49AE47312BDD2-4511_END*/
+  /*3C0D8BA87C7B3BC62C90-5AA7_START*/
+  /*3C0D8BA87C7B3BC62C90-5AA7_END*/
+  /*04C4A222DF95B05A74C1-A554_START*/
+  /*04C4A222DF95B05A74C1-A554_END*/
+  /*21F402B4F2017EAA0144-2C51_START*/
+  /*21F402B4F2017EAA0144-2C51_END*/
+  /*750DFAF3F67943FE685C-0464_START*/
+  /*750DFAF3F67943FE685C-0464_END*/
+  /*493198405B59A7EBC28A-5BF1_START*/
+  /*493198405B59A7EBC28A-5BF1_END*/
+  /*78CC1DDA5A1C1F7B6B70-0196_START*/
+  /*78CC1DDA5A1C1F7B6B70-0196_END*/
+  /*5D938FA1299B7DE1503E-7732_START*/
+  /*5D938FA1299B7DE1503E-7732_END*/
+}
+.default-theme .aw-loginPage-loginPage-44c1 {
+  transition: margin-top linear 0.2s;
+  -moz-transition: margin-top linear 0.2s;
+  -webkit-transition: margin-top linear 0.2s;
+  -o-transition: margin-top linear 0.2s;
+}
+.default-theme .aw-indexPage-indexPage-4 {
+  overflow: auto;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+}
+.default-theme .aw-batchContInfo-batchApply-15 {
+  background: -webkit-gradient(left, #f66a51, #f63c40) !important;
+  background: -o-linear-gradient(right, #f66a51, #f63c40) !important;
+  background: -moz-linear-gradient(right, #f66a51, #f63c40) !important;
+  background: linear-gradient(to right, #f66a51, #f63c40) !important;
+}
+.default-theme .aw-batchContInfo-batchApply-15 label {
+  display: none;
+}
+.default-theme .aw-batchContInfo-batchApply-52#foundationImg9 {
+  height: 100%;
+}
+.default-theme .aw-batchContInfo-batchColletion-5 label {
+  display: none;
+}
+.default-theme .aw-batchContInfo-batchColletion-5 .columns {
+  height: 100%;
+}
+.default-theme .aw-batchContInfo-batchColletion-71 img {
+  max-height: 36px!important;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+.default-theme .aw-batchContInfo-batchAccout-7 .columns {
+  height: 100%;
+}
+.default-theme .aw-batchContInfo-batchAccout-7 .input-group {
+  margin-bottom: 0px!important;
+  height: 100%;
+}
+.default-theme .aw-batchContInfo-batchAccout-7 .medium-1 {
+  display: none;
+}
+.default-theme .aw-batchContInfo-batchSign-186c1 .medium-3 {
+  display: none;
+}
+.default-theme .aw-batchContInfo-batchSign-186c1 label {
+  margin-top: 0px!important;
+  position: absolute;
+  top: 50%;
+}
+.default-theme .aw-batchContInfo-batchSign-305 {
+  width: 95%;
+  top: 45%;
+  border-radius: 9px!important;
+}
+.default-theme .aw-infoCollection-colletionBegin-45 {
+  top: 50%;
+}
+.default-theme .aw-infoCollection-colletionBegin-45 .modal-header {
+  display: none;
+}
+.default-theme .aw-infoCollection-colletionBegin-69 label {
+  display: none;
+}
+.default-theme .aw-infoCollection-colletionBegin-69 .colunms {
+  height: 100%;
+  width: 100%;
+}

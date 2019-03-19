@@ -1804,7 +1804,7 @@ define('app.ajax',['app.getData','app.getUID','app.modal','app.validate'],functi
 
         return $.ajax;
     }()});
-define('app.alert',['app.dispatcher','app.modal'],function () {app.alert=function (){
+define('app.alert',['app.dispatcher','app.modal'],function () {app.alert=function(){
                 var SHOW_TYPE = {
                         SUCCESS: 'success',
                         success: 'fa fa-check-circle alert-success ',
@@ -2103,7 +2103,7 @@ define('app.alert',['app.dispatcher','app.modal'],function () {app.alert=functio
                 /*详情请见api部分*/
                 return alertFunc;
             }()});
-define('app.alertAction',[],function () {app.alertAction=function (){
+define('app.alertAction',[],function () {app.alertAction=function(){
 
     var alertAction = {
             close: app.alert.close,
@@ -3596,7 +3596,7 @@ define('app.modal',['app.getUID','app.reset','app.screen'],function () {app.moda
 
     return modal;
 }()});
-define('app.page',[],function () {app.page=function (){
+define('app.page',[],function () {app.page=function(){
 
                     var actions = {
                         refresh: function () {
@@ -3792,7 +3792,7 @@ define('app.performance',[],function () {app.performance=function () {
 
     return new Performance();
 }()});
-define('app.popover',['app.getUID'],function () {app.popover=function (){
+define('app.popover',['app.getUID'],function () {app.popover=function(){
                     var popover;
                     //tooltip
 
@@ -5476,7 +5476,7 @@ define('app.setData',['app.stringify'],function () {app.setData=function (name, 
 
         return result;
     }});
-define('app.shelter',['app.getUID'],function () {app.shelter=function (){
+define('app.shelter',['app.getUID'],function () {app.shelter=function(){
         var Shelter = function () {
             var context = this,
                 $body = $('body');
@@ -5948,7 +5948,10 @@ define('app.validate',[],function () {app.validate=function () {
                                     successCallback($elem);
 
                                 } else {
-                                    msg=$AW.nsl(msg,info.widgetID,info.pageContext);
+                                    if(info.pageContext){
+                                        msg=$AW.nsl(msg,info.widgetID,info.pageContext);
+                                    }
+                                   
 
                                     list.push({
                                         name: item.name,

@@ -7,3 +7,9 @@ node_modules/
 target/webapp/dependence
 target/webapp/module
 target/webapp/NSL 
+.DS_Store
+.awb/
+
+
+package-lock.json
+*.log

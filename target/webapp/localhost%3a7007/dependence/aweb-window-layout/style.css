@@ -1,0 +1,122 @@
+/*******Variables Start***********/
+/*******Variables End***********/
+/*******Mixins Start***********/
+.no-border {
+  border: none !important;
+  outline: 0 !important;
+}
+.no-style {
+  margin-left: 0;
+  list-style: none;
+}
+/*******Mixins End***********/
+.aweb-wl-ctn {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+.aweb-wl-ctn > .aweb-wl-frame-ctn {
+  display: flex;
+  flex-grow: 1;
+}
+.aweb-wl-ctn > .aweb-wl-nav {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  height: 38px;
+  box-shadow: 1px 1px 10px #efefef;
+}
+.aweb-wl-ctn > .aweb-wl-nav bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: -1;
+}
+.aweb-wl-ctn > .aweb-wl-nav > menu {
+  position: relative;
+  display: flex;
+  height: 100%;
+  width: 50px;
+  margin: 0;
+  padding: 0;
+}
+.aweb-wl-ctn > .aweb-wl-nav > menu > start {
+  transition: background 0.3s linear;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-position: 5px 6px;
+  background-size: 38px;
+  cursor: pointer;
+}
+.aweb-wl-ctn > .aweb-wl-nav > menu > start:hover,
+.aweb-wl-ctn > .aweb-wl-nav > menu > start:focus {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.aweb-wl-ctn > .aweb-wl-nav > menu > start-menu {
+  position: absolute;
+  top: auto;
+  right: auto;
+  bottom: 38px;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  height: 60vh;
+  width: 40vw;
+  max-height: 600px;
+  max-width: 960px;
+  min-width: 600px;
+  z-index: 1;
+  overflow: hidden;
+}
+.aweb-wl-ctn > .aweb-wl-nav > menu > start-menu > aside {
+  width: 50px;
+  padding: 0;
+  overflow: auto;
+}
+.aweb-wl-ctn > .aweb-wl-nav > menu > start-menu > aside > aside-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+  background-color: #333;
+}
+.aweb-wl-ctn > .aweb-wl-nav > menu > start-menu > aside > aside-content > aside-item {
+  cursor: pointer;
+  padding: 7.6px 0;
+  text-align: center;
+  color: white;
+  transition: background 0.3s linear;
+}
+.aweb-wl-ctn > .aweb-wl-nav > menu > start-menu > aside > aside-content > aside-item:hover,
+.aweb-wl-ctn > .aweb-wl-nav > menu > start-menu > aside > aside-content > aside-item:focus {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.aweb-wl-ctn > .aweb-wl-nav > menu > start-menu > aside > aside-content > aside-item > i {
+  font-size: 19px;
+}
+.aweb-wl-ctn > .aweb-wl-nav > menu > start-menu > menu-list-ctn {
+  width: 200px;
+  padding: 0 6px;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: white;
+}
+.aweb-wl-ctn > .aweb-wl-nav > menu > start-menu > menu-list-ctn > menu-group > menu-label {
+  display: block;
+  font-size: 14px;
+  line-height: 2;
+}
+.aweb-wl-ctn > .aweb-wl-nav > menu > start-menu > pin-list {
+  display: flex;
+  flex-grow: 1;
+  overflow: auto;
+}

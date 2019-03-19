@@ -88,7 +88,7 @@ let staticExtname = '*(svg|eot|ttf|woff|woff2|gif|png|jpg|jpeg)', config = {
             source: ['node_modules/@aweb-initApp/webXml/**/*', '!node_modules/@aweb-initApp/webXml/**/package.json'],
             dest: 'src/main/webapp/WEB-INF',
             tips: '初始化web.xml'
-        },
+        }
     },
     js: [{
             source: ['node_modules/@aweb-lib/**/*.js'],
@@ -151,7 +151,8 @@ let staticExtname = '*(svg|eot|ttf|woff|woff2|gif|png|jpg|jpeg)', config = {
             source: [
                 'node_modules/@aweb-lib/**/*.less'
             ],
-            dest: 'target/webapp/dependence/',
+            dest: 'node_modules/@aweb-lib/',
+            _dest: 'target/webapp/dependence/',
             watch: [
                 'node_modules/@aweb-lib/**/*.less'
             ],
@@ -161,7 +162,8 @@ let staticExtname = '*(svg|eot|ttf|woff|woff2|gif|png|jpg|jpeg)', config = {
             source: [
                 'node_modules/@aweb-components/**/*.less'
             ],
-            dest: 'target/webapp/dependence/',
+            dest: 'node_modules/@aweb-components/',
+            _dest: 'target/webapp/dependence/',
             watch: [
                 'node_modules/@aweb-components/**/*.less'
             ],
@@ -171,7 +173,8 @@ let staticExtname = '*(svg|eot|ttf|woff|woff2|gif|png|jpg|jpeg)', config = {
             source: [
                 'src/main/webapp/dependence/**/*.less'
             ],
-            dest: 'target/webapp/dependence/',
+            dest: 'src/main/webapp/dependence/',
+            _dest: 'target/webapp/dependence/',
             watch: [
                 'src/main/webapp/dependence/**/*.less'
             ],
@@ -182,25 +185,25 @@ let staticExtname = '*(svg|eot|ttf|woff|woff2|gif|png|jpg|jpeg)', config = {
                 `node_modules/@aweb-lib/**/*.${staticExtname}`,
                 `node_modules/@aweb-components/**/*.${staticExtname}`,
                 `src/main/webapp/dependence/**/*.${staticExtname}`,
-                `src/main/webapp/dependence/module/**/*.html`,
+                `src/main/webapp/module/**/*.html`,
             ],
             dest: 'target/webapp/dependence/',
             watch: [
                 `node_modules/@aweb-lib/**/*.${staticExtname}`,
                 `node_modules/@aweb-components/**/*.${staticExtname}`,
                 `src/main/webapp/dependence/**/*.${staticExtname}`,
-                `src/main/webapp/dependence/module/**/*.html`,
+                `src/main/webapp/module/**/*.html`,
             ],
             tips: '静态资源和HTML文件'
         }, {
             source: [
-                `src/main/webapp/module/**/mvvm.json`,
-                `src/main/webapp/module/**/*.html`
+                `src/main/webapp/module/**`,
+                `!src/main/webapp/module/**/*.awb`
             ],
             dest: 'target/webapp/module',
             watch: [
-                `src/main/webapp/module/**/mvvm.json`,
-                `src/main/webapp/module/**/*.html`
+                `src/main/webapp/module/**`,
+                `!src/main/webapp/module/**/*.awb`
             ],
             tips: 'HTML文件和MVVM.json'
         },
@@ -533,12 +536,18 @@ const initPluginsIndex = () => __awaiter(this, void 0, void 0, function* () {
         showErrorText(error);
     }
 });
-const runLess = (item) => {
+const runLess = (item, resolve) => {
     return () => {
         try {
             var pipe = gulp.src(item.source, { allowEmpty: true }).pipe(plumber()).pipe(less());
-            pipe.pipe(gulp.dest(item.dest));
-            showFinishText(item.tips);
+            pipe = pipe.pipe(gulp.dest(item.dest));
+            if (item._dest) {
+                pipe.pipe(gulp.dest(item._dest));
+            }
+            pipe.on('end', () => {
+                showFinishText(item.tips);
+                resolve && resolve();
+            });
         }
         catch (error) {
             showErrorText(error);
@@ -666,9 +675,9 @@ const runPlugins = (item) => {
         }
     });
 };
-const compileLess = () => {
+const compileLess = (resolve) => {
     for (let i = -1, item; item = config.less[++i];) {
-        runLess(item)();
+        runLess(item, resolve)();
         if (item.watch && isWatch) {
             watch(item.watch, runLess(item));
         }
@@ -725,8 +734,8 @@ const compilePluigs = () => __awaiter(this, void 0, void 0, function* () {
     }
 });
 const compilePageModule = (target = `${__dirname}/src/main/webapp/module`) => __awaiter(this, void 0, void 0, function* () {
-    let data = yield readFile('./package.json');
-    return node_fetch_1.default(`http://127.0.0.1:${JSON.parse(data).port || 7350}/compiler`, {
+    let port = yield readFile('./.awb/port');
+    return node_fetch_1.default(`http://127.0.0.1:${port || 7350}/compiler`, {
         method: 'post',
         headers: {
             'Content-Type': 'application/json'
@@ -818,7 +827,12 @@ gulp.task('init', gulp.series('copy', () => __awaiter(this, void 0, void 0, func
     data_json.scripts.watch = `gulp watch`;
     yield writeFile('./package.json', JSON.stringify(data_json, null, 4));
 })));
-gulp.task('compile', gulp.series('plugins', () => __awaiter(this, void 0, void 0, function* () {
+gulp.task('less', () => {
+    return new Promise(function (resolve, reject) {
+        compileLess(resolve);
+    });
+});
+gulp.task('compile', gulp.series('plugins', 'less', () => __awaiter(this, void 0, void 0, function* () {
     isWatch = false;
     compileJs();
     compileCss();
@@ -828,7 +842,7 @@ gulp.task('compile', gulp.series('plugins', () => __awaiter(this, void 0, void 0
     compileNsl();
     yield compilePageModule();
 })));
-gulp.task('watch', gulp.series('compile', () => __awaiter(this, void 0, void 0, function* () {
+gulp.task('watch', gulp.series('compile', 'less', () => __awaiter(this, void 0, void 0, function* () {
     isWatch = true;
     compileJs();
     compileCss();

@@ -177,7 +177,10 @@
                                     successCallback($elem);
 
                                 } else {
-                                    msg=$AW.nsl(msg,info.widgetID,info.pageContext);
+                                    if(info.pageContext){
+                                        msg=$AW.nsl(msg,info.widgetID,info.pageContext);
+                                    }
+                                   
 
                                     list.push({
                                         name: item.name,

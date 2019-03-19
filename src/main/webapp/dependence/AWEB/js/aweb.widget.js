@@ -1,7 +1,7 @@
 define(['jquery'], function ($) {
 	var global=window,
 		widget,$AW,
-		dispatcher=app.dispatcher(100);
+		dispatcher=new app.dispatcher(100);
 
 	$AW=widget = {
 
