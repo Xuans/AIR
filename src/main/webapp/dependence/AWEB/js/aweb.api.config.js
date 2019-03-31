@@ -1883,6 +1883,20 @@ define([], function () {
                 "compatibility": "ie8"
             },
             {
+                "name": "getServerUrl",
+                "desp": "获取服务器域名",
+                "details": "获取服务器域名，如https:awebide.com:8443/kk",
+                "hasReturn": true,
+                "returnValue": {
+                    "name": "serverUrl",
+                    "desp": "服务器域名",
+                    "type": "string"
+                },
+                "edition": {
+                    "mobile": "app.getServerUrl"
+                }
+            },
+            {
                 "name": "queryString",
                 "desp": "获取页面内查询字符串",
                 "params": [
@@ -2341,6 +2355,41 @@ define([], function () {
                 "compatibility": "ie8"
             }
         ]
+    },
+    {
+        "children": [
+            {
+                "name": "tips",
+                "desp": "提示弹框",
+                "belongTo": "closure",
+                "params": [
+                    {
+                        "name": "title",
+                        "type": "string",
+                        "desp": "标题",
+                        "details": "消息标题，必需",
+                        "necessary": true
+                    },
+                    {
+                        "name": "message",
+                        "type": "string",
+                        "desp": "提示信息",
+                        "details": "可以使HTML代码，消息内容，必需",
+                        "necessary": true
+                    },
+                    {
+                        "name": "type",
+                        "type": "string_select",
+                        "desp": "提示类型",
+                        "details": "有“_DEFAULT\"(默认),\"SUCCESS\"(成功),\"ERROR\"(错误),\"WARNING\"(警告)四种类型，使用时许引用app.tips.showType",
+                        "necessary": true
+                    }
+                ],
+                "appJsCode": "app.tips",
+                "hasReturn": false,
+                "compatibility": "ie8"
+            }
+        ]
     }
 ],
                     appInterfacesConst:[
@@ -2493,6 +2542,21 @@ define([], function () {
             "iPhone版cordova App",
             "安卓手机版Cordova App",
             "安卓平板版Cordova App"
+        ]
+    },
+    {
+        "category": "提示弹框类型",
+        "valueArray": [
+            "app.tips.ERROR",
+            "app.tips.SUCCESS",
+            "app.tips.WARNING",
+            "app.tips._DEFAULT"
+        ],
+        "despArray": [
+            "提示错误类型",
+            "提示成功类型",
+            "提示警告类型",
+            "默认类型"
         ]
     }
 ]

@@ -1,4 +1,4 @@
-define([].concat(window.aweb.transformJsConfig([ "ctn", "ctn.divCtn" ])).concat(window.aweb.transformCssConfig([ "AUI/css/layout.ctn.css" ])), function() {
+define([].concat(window.aweb.transformJsConfig([ "ctn", "ctn.divCtn" ])).concat(window.aweb.transformCssConfig([ "AUI/css/layout.ctn.css", "css/indexPage-indexPage_1AB7285AC15CFD828325-6129.css" ])), function() {
     return function() {
         return function() {
             return function(auiCtx) {

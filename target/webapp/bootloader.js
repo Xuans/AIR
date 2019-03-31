@@ -16,6 +16,7 @@
     "AWEB/css/aweb.popover.css": "AWEB/css/aweb.popover.css",
     "AUI/css/component.foundationForm.foundationSelectIcon.css": "component.foundationForm.foundationSelectIcon/css/component.foundationForm.foundationSelectIcon.css",
     "AUI/css/component.foundationForm.foundationWysiwyg.css": "component.foundationForm.foundationWysiwyg/css/component.foundationForm.foundationWysiwyg.css",
+    "custom.AIR_rxjsTest/css/custom.AIR_rxjsTest.css": "custom.AIR_rxjsTest/css/custom.AIR_rxjsTest.css",
     "custom.Update2_awl/css/custom.Update2_awl.css": "custom.Update2_awl/css/custom.Update2_awl.css",
     "AUI/css/mobile.SoYComponent.SoYActionSheet.css": "mobile.SoYComponent.SoYActionSheet/css/mobile.SoYComponent.SoYActionSheet.css",
     "AWEB/css/font-awesome.min.css": "AWEB/css/font-awesome.min.css",
@@ -23,14 +24,11 @@
     "AUI/css/mobile.SoYComponent.SoYCalendar.css": "mobile.SoYComponent.SoYCalendar/css/mobile.SoYComponent.SoYCalendar.css",
     "AUI/css/mobile.SoYComponent.SoYCard.css": "mobile.SoYComponent.SoYCard/css/mobile.SoYComponent.SoYCard.css",
     "AUI/css/mobile.SoYComponent.SoYCarouselFigure.css": "mobile.SoYComponent.SoYCarouselFigure/css/mobile.SoYComponent.SoYCarouselFigure.css",
-    "AUI/css/mobile.SoYComponent.SoYCheckList.css": "mobile.SoYComponent.SoYCheckList/css/mobile.SoYComponent.SoYCheckList.css",
     "AUI/css/mobile.SoYComponent.SoYCircleChart.css": "mobile.SoYComponent.SoYCircleChart/css/mobile.SoYComponent.SoYCircleChart.css",
     "AUI/css/mobile.SoYComponent.SoYGrid.css": "mobile.SoYComponent.SoYGrid/css/mobile.SoYComponent.SoYGrid.css",
     "AUI/css/mobile.SoYComponent.SoYInputItem.css": "mobile.SoYComponent.SoYInputItem/css/mobile.SoYComponent.SoYInputItem.css",
     "AUI/css/mobile.SoYComponent.SoYList.css": "mobile.SoYComponent.SoYList/css/mobile.SoYComponent.SoYList.css",
-    "AUI/css/mobile.SoYComponent.SoYPictureUpload.css": "mobile.SoYComponent.SoYPictureUpload/css/mobile.SoYComponent.SoYPictureUpload.css",
     "AUI/css/mobile.SoYComponent.SoYProgress.css": "mobile.SoYComponent.SoYProgress/css/mobile.SoYComponent.SoYProgress.css",
-    "AUI/css/mobile.SoYComponent.SoYRadioList.css": "mobile.SoYComponent.SoYRadioList/css/mobile.SoYComponent.SoYRadioList.css",
     "AUI/css/mobile.SoYComponent.SoYSearch.css": "mobile.SoYComponent.SoYSearch/css/mobile.SoYComponent.SoYSearch.css",
     "AUI/css/mobile.SoYComponent.SoYStepper.css": "mobile.SoYComponent.SoYStepper/css/mobile.SoYComponent.SoYStepper.css",
     "AUI/css/mobile.SoYComponent.SoYSwitch.css": "mobile.SoYComponent.SoYSwitch/css/mobile.SoYComponent.SoYSwitch.css",
@@ -38,7 +36,6 @@
     "AUI/css/mobile.SoYLayout.indexLayout.css": "mobile.SoYLayout.indexLayout/css/mobile.SoYLayout.indexLayout.css",
     "AUI/css/mobile.SoYLayout.mobileDrawer.css": "mobile.SoYLayout.mobileDrawer/css/mobile.SoYLayout.mobileDrawer.css",
     "AUI/css/mobile.SoYLayout.mobileLayout.css": "mobile.SoYLayout.mobileLayout/css/mobile.SoYLayout.mobileLayout.css",
-    "AUI/css/mobile.SoYLayout.mobileTab.css": "mobile.SoYLayout.mobileTab/css/mobile.SoYLayout.mobileTab.css",
     "AUI/css/monitor.MComponent.MBaseConfig.css": "monitor.MComponent.MBaseConfig/css/monitor.MComponent.MBaseConfig.css",
     "AUI/css/monitor.MComponent.MCascader.css": "monitor.MComponent.MCascader/css/monitor.MComponent.MCascader.css",
     "AUI/css/monitor.MComponent.MCheckIpt.css": "monitor.MComponent.MCheckIpt/css/monitor.MComponent.MCheckIpt.css",
@@ -272,10 +269,6 @@
         "name": "component.foundationForm.foundationSelectIcon",
         "path": "dependence/component.foundationForm.foundationSelectIcon/js/component.foundationForm.foundationSelectIcon.js"
     },
-    "component.foundationForm.foundationSingleUpload": {
-        "name": "component.foundationForm.foundationSingleUpload",
-        "path": "dependence/component.foundationForm.foundationSingleUpload/js/component.foundationForm.foundationSingleUpload.js"
-    },
     "component.foundationForm.foundationSwitch": {
         "name": "component.foundationForm.foundationSwitch",
         "path": "dependence/component.foundationForm.foundationSwitch/js/component.foundationForm.foundationSwitch.js"
@@ -295,10 +288,6 @@
     "component.foundationForm.foundationUploadButton": {
         "name": "component.foundationForm.foundationUploadButton",
         "path": "dependence/component.foundationForm.foundationUploadButton/js/component.foundationForm.foundationUploadButton.js"
-    },
-    "component.foundationForm.foundationVerifyInput": {
-        "name": "component.foundationForm.foundationVerifyInput",
-        "path": "dependence/component.foundationForm.foundationVerifyInput/js/component.foundationForm.foundationVerifyInput.js"
     },
     "component.foundationForm.foundationWangEditor": {
         "name": "component.foundationForm.foundationWangEditor",
@@ -412,6 +401,10 @@
         "name": "ctn.modalCtn",
         "path": "dependence/ctn.modalCtn/js/ctn.modalCtn.js"
     },
+    "custom.AIR_rxjsTest": {
+        "name": "custom.AIR_rxjsTest",
+        "path": "dependence/custom.AIR_rxjsTest/js/custom.AIR_rxjsTest.js"
+    },
     "custom.Update2_awl": {
         "name": "custom.Update2_awl",
         "path": "dependence/custom.Update2_awl/js/custom.Update2_awl.js"
@@ -456,10 +449,6 @@
         "name": "mobile.SoYComponent.SoYCarouselFigure",
         "path": "dependence/mobile.SoYComponent.SoYCarouselFigure/js/mobile.SoYComponent.SoYCarouselFigure.js"
     },
-    "mobile.SoYComponent.SoYCheckList": {
-        "name": "mobile.SoYComponent.SoYCheckList",
-        "path": "dependence/mobile.SoYComponent.SoYCheckList/js/mobile.SoYComponent.SoYCheckList.js"
-    },
     "mobile.SoYComponent.SoYCircleChart": {
         "name": "mobile.SoYComponent.SoYCircleChart",
         "path": "dependence/mobile.SoYComponent.SoYCircleChart/js/mobile.SoYComponent.SoYCircleChart.js"
@@ -488,10 +477,6 @@
         "name": "mobile.SoYComponent.SoYList",
         "path": "dependence/mobile.SoYComponent.SoYList/js/mobile.SoYComponent.SoYList.js"
     },
-    "mobile.SoYComponent.SoYPictureUpload": {
-        "name": "mobile.SoYComponent.SoYPictureUpload",
-        "path": "dependence/mobile.SoYComponent.SoYPictureUpload/js/mobile.SoYComponent.SoYPictureUpload.js"
-    },
     "mobile.SoYComponent.SoYPieChart": {
         "name": "mobile.SoYComponent.SoYPieChart",
         "path": "dependence/mobile.SoYComponent.SoYPieChart/js/mobile.SoYComponent.SoYPieChart.js"
@@ -499,10 +484,6 @@
     "mobile.SoYComponent.SoYProgress": {
         "name": "mobile.SoYComponent.SoYProgress",
         "path": "dependence/mobile.SoYComponent.SoYProgress/js/mobile.SoYComponent.SoYProgress.js"
-    },
-    "mobile.SoYComponent.SoYRadioList": {
-        "name": "mobile.SoYComponent.SoYRadioList",
-        "path": "dependence/mobile.SoYComponent.SoYRadioList/js/mobile.SoYComponent.SoYRadioList.js"
     },
     "mobile.SoYComponent.SoYSearch": {
         "name": "mobile.SoYComponent.SoYSearch",
@@ -539,10 +520,6 @@
     "mobile.SoYLayout.mobileLayout": {
         "name": "mobile.SoYLayout.mobileLayout",
         "path": "dependence/mobile.SoYLayout.mobileLayout/js/mobile.SoYLayout.mobileLayout.js"
-    },
-    "mobile.SoYLayout.mobileTab": {
-        "name": "mobile.SoYLayout.mobileTab",
-        "path": "dependence/mobile.SoYLayout.mobileTab/js/mobile.SoYLayout.mobileTab.js"
     },
     "monitor.MComponent.MAsideMenu": {
         "name": "monitor.MComponent.MAsideMenu",
@@ -623,10 +600,6 @@
     "monitor.MEcharts": {
         "name": "monitor.MEcharts",
         "path": "dependence/monitor.MEcharts/js/monitor.MEcharts.js"
-    },
-    "monitor.MEcharts.M3Dbar": {
-        "name": "monitor.MEcharts.M3Dbar",
-        "path": "dependence/monitor.MEcharts.M3Dbar/js/monitor.MEcharts.M3Dbar.js"
     },
     "monitor.MEcharts.MCustomizedPie": {
         "name": "monitor.MEcharts.MCustomizedPie",
@@ -773,10 +746,6 @@
         "path": "dependence/echarts/js/echarts.min",
         "exports": "echarts"
     },
-    "echarts-gl": {
-        "name": "echarts-gl",
-        "path": "dependence/echarts-gl/js/echarts-gl.min"
-    },
     "echarts4.2": {
         "name": "echarts4.2",
         "path": "dependence/echarts4.2/js/echarts-4.2.0.min"
@@ -894,6 +863,10 @@
     "requireJS": {
         "name": "requireJS",
         "path": "dependence/requireJS/js/require.js"
+    },
+    "rxjs": {
+        "name": "rxjs",
+        "path": "dependence/rxjs/js/rxjs.umd.min.js"
     },
     "sequenceDiagram": {
         "name": "sequenceDiagram",
@@ -1263,7 +1236,7 @@
         if (app && app.shelter) {
             app.shelter.hideAll();
         }
-        throw  err;
+        throw err;
     };
 
 })(this);

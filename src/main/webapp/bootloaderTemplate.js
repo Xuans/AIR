@@ -319,7 +319,7 @@
         if (app && app.shelter) {
             app.shelter.hideAll();
         }
-        throw  err;
+        throw err;
     };
 
 })(this);

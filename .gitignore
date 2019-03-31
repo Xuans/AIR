@@ -1,8 +1,15 @@
 
 .idea/
 
+.metadata/
+.project
+.settings/
+
 node_modules/
+
+
 .vscode/
+
 
 target/webapp/dependence
 target/webapp/module
@@ -12,4 +19,3 @@ target/webapp/NSL
 
 
 package-lock.json
-*.log

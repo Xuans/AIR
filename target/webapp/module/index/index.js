@@ -123,7 +123,8 @@ define("awebIndex", [ "viewer.blank" ].concat(window.aweb.transformJsConfig([ "v
                                                 app.setData("ctoken", window.ctoken);
                                                 app.globalRouter.open({
                                                     id: "indexPage" + app.getUID(),
-                                                    page: "indexPage#indexPage",
+                                                    page: "RxJS函数与响应式编程#rxjs",
+                                                    //page: 'indexPage#indexPage',
                                                     status: true
                                                 });
                                             }

@@ -2773,6 +2773,9 @@ define('app.getQueryStringMap',[],function () {app.getQueryStringMap=function ()
 
     return result;
 }});
+define('app.getServerUrl',[],function () {app.getServerUrl=function () {
+    return window.serverUrl || '';
+}});
 define('app.getUA',[],function () {app.getUA=function () {
     var TYPE = {
             WEIXIN_IPAD: 'weixin iPad',
@@ -5760,6 +5763,45 @@ define('app.stringify',[],function () {app.stringify=function (config) {
 
         return config ? JSON.stringify(functionStringify(config)) : '';
     }});
+define('app.tips',['app.alert','app.modal'],function () {app.tips=function(){
+    require(['widget','awebFresher'],function(){
+        var colors={
+            SUCCESS:$AW.fresher.variablesCopy['@sSuccessColor']||'#23ad44',
+            ERROR:$AW.fresher.variablesCopy['@sErrorColor']||'#f05050',
+            INFO:$AW.fresher.variablesCopy['@sInfoColor']||'#3db9ff',
+            WARNING:$AW.fresher.variablesCopy['@sWarningColor']||'#ffba00'
+        };
+        colors._DEFAULT=colors.INFO;
+
+        app.tips=function(title,msg,type){
+
+            if(!type || type==='_DEFAULT'){
+                type='INFO';
+            }
+
+            if(colors[type]){
+                app.modal({
+                    title:title,
+                    content: '<div class="aui-ide-modal-content">' +
+                                '<i class="'+ app.alert[type.toLowerCase()] +'" style="color:'+ colors[type] +'"></i>'+
+                                '<p data-role="message">'+ msg +'</p>'+
+                            '</div>',
+                    isDialog:true,
+                    isLargeModal:false,
+                    btnConfirm:false,
+                    btnCancel:false
+                  })
+            }
+        }; 
+        
+        for(var k in colors){
+            if(colors.hasOwnProperty(k)){
+                app.tips[k]=k;
+            }
+        }
+
+    })
+}()});
 define('app.title',[],function () {app.title=function (title) {
         var doc = window.top && window.top.document || document;
 
@@ -5982,4 +6024,4 @@ define('app.validate',[],function () {app.validate=function () {
                     $.extend(validate, setting);
 
                     return validate;
-                }()});  require(['app.Controller','app.ajax','app.alert','app.alertAction','app.behavior','app.collapse','app.deepClone','app.dispatcher','app.domain','app.eval','app.getData','app.getFormatData','app.getNewQueryStringURL','app.getQueryStringMap','app.getUA','app.getUID','app.hsla','app.modal','app.page','app.parseJSObject','app.performance','app.popover','app.position','app.queryString','app.removeData','app.reset','app.screen','app.scrollTop','app.select','app.setData','app.shelter','app.stringify','app.title','app.validate' ]) })
+                }()});  require(['app.Controller','app.ajax','app.alert','app.alertAction','app.behavior','app.collapse','app.deepClone','app.dispatcher','app.domain','app.eval','app.getData','app.getFormatData','app.getNewQueryStringURL','app.getQueryStringMap','app.getServerUrl','app.getUA','app.getUID','app.hsla','app.modal','app.page','app.parseJSObject','app.performance','app.popover','app.position','app.queryString','app.removeData','app.reset','app.screen','app.scrollTop','app.select','app.setData','app.shelter','app.stringify','app.tips','app.title','app.validate' ]) })
